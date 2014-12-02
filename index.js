@@ -22,7 +22,7 @@ function plugin(opts) {
       var from = path.dirname(normalizePath(file));
 
       files[file][opts.methodName] = function(to) {
-        return path.relative(from, normalizePath(to));
+        return to == undefined || to == null ? '' + to : path.relative(from, normalizePath(to));
       }
 
     });
