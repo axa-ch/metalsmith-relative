@@ -1,0 +1,27 @@
+{
+  "name": "metalsmith-relative",
+  "version": "1.0.0",
+  "description": "Metalsmith plugin to get relative paths",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/axa-ch/metalsmith-relative.git"
+  },
+  "keywords": [
+    "metalsmith",
+    "relative",
+    "path"
+  ],
+  "author": "Sven Tschui <sven.tschui@axa.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axa-ch/metalsmith-relative/issues"
+  },
+  "homepage": "https://github.com/axa-ch/metalsmith-relative",
+  "dependencies": {
+    "extend": "^2.0.0"
+  }
+}
