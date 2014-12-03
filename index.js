@@ -1,17 +1,9 @@
 var path = require('path')
 var extend = require('extend')
+var normalizePath = require('./lib/normalize-path')
+var makePathBrowserCompliant = require('./lib/make-path-browser-compliant')
 
 module.exports = plugin;
-
-function normalizePath(p) {
-  p = path.normalize(p);
-
-  if(p.charAt(0) == path.sep) {
-    p = p.substring(1);
-  }
-
-  return p
-}
 
 function plugin(opts) {
   opts = extend({ methodName: 'relative' }, opts);
@@ -22,7 +14,7 @@ function plugin(opts) {
       var from = path.dirname(normalizePath(file));
 
       files[file][opts.methodName] = function(to) {
-        return to == undefined || to == null ? '' + to : path.relative(from, normalizePath(to));
+        return to == undefined || to == null ? '' + to : makePathBrowserCompliant(path.relative(from, normalizePath(to)));
       }
 
     });
