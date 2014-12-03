@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-relative",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Metalsmith plugin to get relative paths",
   "main": "index.js",
   "scripts": {
